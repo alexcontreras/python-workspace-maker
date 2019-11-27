@@ -3,6 +3,8 @@ from tkinter import filedialog, Text
 import os
 
 root = tk.Tk()
+root.title("Workspace Maker")
+
 apps = []
 
 if os.path.isfile('save.txt'):
@@ -30,7 +32,8 @@ def runApps():
         os.startfile(app)
 
 
-canvas = tk.Canvas(root, height=700, width=700, bg="#263D42")
+canvas = tk.Canvas(root, height=700, width=700,
+                   bg="#263D42")
 canvas.pack()
 
 frame = tk.Frame(root, bg="white")
